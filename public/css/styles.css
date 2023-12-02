@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background: rgb(155, 158, 206);
+  background: linear-gradient(0deg, rgb(155, 158, 206) 0%, rgb(77, 108, 250) 100%);
+  padding: 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  padding: 10px 50px;
+  border: none;
+  margin-bottom: 15px;
+  border-radius: 30px;
+}
+
+table {
+  width: 1000px;
+  border-collapse: separate;
+  border-spacing: 10px;
+  background-color: #E5E9EC;
+  box-shadow: 2px 2px 2px 2px #2d3748;
+  border-radius: 30px;
+}
+
+thead {
+  text-align: center;
+  background-color: #4D6CFA;
+}
+
+th {
+  color: #e2e8f0;
+}
+
+td:first-of-type {
+  color: #1a202c;
+  font: 600 15px "Arail";
+}
+
+th, td {
+  font: 500 15px "Arial";
+  border-radius: 30px;
+  letter-spacing: 2px;
+  border: 1px dashed #4D6CFA;
+  padding: 5px 8px;
+}
+
+tbody {
+  text-align: center;
+  background-color: #9B9ECE;
+}
+
+.container {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.create-body, .edit-body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgb(155, 158, 206);
+  background: linear-gradient(0deg, rgb(155, 158, 206) 0%, rgb(77, 108, 250) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.create-form, .edit-form {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.alignBtns {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.createBtn {
+  border-radius: 70px;
+  font: 500 15px "Arial";
+  padding: 5px 10px;
+  color: #1a202c;
+  background-color: #e2e8f0;
+  border: 0;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px 2px #2d3748;
+  border: 1px dashed #F45866;
+  margin-bottom: 50px;
+  padding: 10px 15px;
+  letter-spacing: 2px;
+}
+
+.editBtn {
+  border-radius: 10px;
+  font: 500 15px "Arial";
+  padding: 5px 10px;
+  color: #1a202c;
+  background-color: #9FC490;
+  border: 0;
+  cursor: pointer;
+}
+
+.deleteBtn {
+  border-radius: 10px;
+  font: 500 15px "Arial";
+  padding: 5px 10px;
+  color: #1a202c;
+  background-color: #F45866;
+  border: 0;
+  cursor: pointer;
+  letter-spacing: 2px;
+}
+
+.submitBtn {
+  border-radius: 10px;
+  font: 500 15px "Arial";
+  padding: 5px 10px;
+  color: #1a202c;
+  background-color: #E5E9EC;
+  border: 0;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=styles.css.map */

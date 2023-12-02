@@ -1,0 +1,158 @@
+$bg-color: #6665DD;
+$bg-table: #E5E9EC;
+$thead-bg-color: #4D6CFA;
+$tbody-bg-color: #9B9ECE;
+$success-bg-color: #9FC490;
+$danger-bg-color: #F45866;
+
+@mixin alignCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin textFormation($weight, $size, $family) {
+    font: $weight $size $family;
+}
+
+@mixin thead {
+    text-align: center;
+    background-color: $thead-bg-color;
+}
+
+@mixin tbody {
+    text-align: center;
+    background-color: $tbody-bg-color;
+}
+
+@mixin btn($btn-bg-color) {
+    padding: 5px 10px;color: #1a202c;
+    background-color: $btn-bg-color;
+    border: 0;
+    cursor: pointer;
+}
+
+@mixin borderRadius($border-radius) {
+    border-radius: $border-radius;
+}
+
+@mixin input {
+    padding: 10px 50px;
+    border: none;
+    margin-bottom: 15px;
+    @include borderRadius(30px);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background: rgb(155,158,206);
+    background: linear-gradient(0deg, rgba(155,158,206,1) 0%, rgba(77,108,250,1) 100%);
+    padding: 30px 0;
+    @include alignCenter;
+}
+
+a {
+    text-decoration: none;
+}
+
+input {
+    @include input;
+}
+
+table {
+    width: 1000px;
+    border-collapse: separate;
+    border-spacing: 10px;
+    background-color: $bg-table;
+    box-shadow: 2px 2px 2px 2px #2d3748;
+    @include borderRadius(30px);
+}
+
+thead {
+    @include thead;
+}
+
+th {
+    color: #e2e8f0;
+}
+
+td:first-of-type {
+    color: #1a202c;
+    @include textFormation(600, 15px, 'Arail');
+}
+
+th, td {
+    @include textFormation(500, 15px, 'Arial');
+    @include borderRadius(30px);
+    letter-spacing: 2px;
+    border: 1px dashed #4D6CFA;
+    padding: 5px 8px;
+}
+
+tbody {
+    @include tbody;
+}
+
+.container {
+    flex-direction: column;
+    @include alignCenter;
+}
+
+.create-body, .edit-body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgb(155,158,206);
+    background: linear-gradient(0deg, rgba(155,158,206,1) 0%, rgba(77,108,250,1) 100%);
+    @include alignCenter;
+}
+
+.create-form, .edit-form {
+    flex-direction: column;
+    @include alignCenter;
+}
+
+.alignBtns {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.createBtn {
+    @include borderRadius(70px);
+    @include textFormation(500, 15px, 'Arial');
+    @include btn(#e2e8f0);
+    box-shadow: 2px 2px 2px 2px #2d3748;
+    border: 1px dashed #F45866;
+    margin-bottom: 50px;
+    padding: 10px 15px;
+    letter-spacing: 2px;
+}
+
+.editBtn {
+    @include borderRadius(10px);
+    @include textFormation(500, 15px, 'Arial');
+    @include btn($success-bg-color);
+}
+
+.deleteBtn {
+    @include borderRadius(10px);
+    @include textFormation(500, 15px, 'Arial');
+    @include btn($danger-bg-color);
+    letter-spacing: 2px;
+
+}
+
+.submitBtn {
+    @include borderRadius(10px);
+    @include textFormation(500, 15px, 'Arial');
+    @include btn($bg-table);
+}
+
